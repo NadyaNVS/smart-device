@@ -1,0 +1,127 @@
+.promo {
+  width: 100%;
+  --bgi: url("../img/intro-image.jpg");
+  background: $gradient-intro, var(--bgi) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  @media (min-width: $vp-1024) {
+    @include retina {
+      --bgi: url("../img/intro-image@2x.jpg");
+    }
+  }
+
+
+  @include vp-1023 {
+    background-position: 16% 39px;
+    --bgi: url("../img/intro-image-tablet.jpg");
+
+    @include retina {
+      --bgi: url("../img/intro-image-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-position: center;
+    --bgi: url("../img/intro-image-mobile.jpg");
+
+    @include retina {
+    --bgi: url("../img/intro-image-mobile@2x.jpg");
+    }
+  }
+}
+
+.promo__wrapper {
+  padding: 305px 0 280px 125px;
+
+  @include vp-1023 {
+    padding: 180px 50px 205px 50px;
+  }
+
+  @include vp-767 {
+    padding: 150px 25px 190px 25px;
+  }
+}
+
+.promo__title {
+  font-family: $ff-roboto-condensed;
+  color: $color-alice-blue;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @include vp-1023 {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.promo__text {
+  font-family: $ff-ptmono;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  margin: 0;
+  margin-bottom: 40px;
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.promo__text br {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.promo__button {
+  font-size: 18px;
+  line-height: 21px;
+  background-color: $color-deep-sky-blue;
+  padding-top: 16px;
+  padding-bottom: 18px;
+
+  @include vp-1023 {
+    margin-left: 45px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    padding: 10px 30px;
+    margin-left: 0;
+  }
+}
+
+.promo__button-main {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.promo__button-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}

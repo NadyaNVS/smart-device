@@ -1,0 +1,20 @@
+.header {
+  background: $black-pearl-to-down;
+  color: $color-alice-blue;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  z-index: 6;
+
+  @include vp-1023 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
