@@ -4,9 +4,9 @@
   background: $gradient-intro, var(--bgi) no-repeat;
   background-position: center;
   background-size: cover;
-  position: absolute;
-  top: 0;
-  z-index: -1;
+  // position: absolute;
+  // top: 0;
+  // z-index: -1;
 
   @media (min-width: $vp-1024) {
     @include retina {
@@ -70,7 +70,6 @@
 }
 
 .promo__text {
-  font-family: $ff-ptmono;
   font-weight: 400;
   font-size: 22px;
   line-height: 34px;
