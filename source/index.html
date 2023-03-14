@@ -21,8 +21,8 @@
         <div class="navigation__wrapper container">
           <a class="navigation__logo logo">
             <picture>
-              <source media="(max-width: 767px)" srcset="./img/svg/logo-company-mobile.svg">
-              <img class="logo__image" src="./img/svg/logo-company.svg" width="215" height="55"
+              <source media="(max-width: 767px)" srcset="img/svg/logo-company-mobile.svg">
+              <img class="logo__image" src="img/svg/logo-company.svg" width="215" height="55"
                 alt="Логотип компании Смарт Девайс.">
             </picture>
           </a>
@@ -30,7 +30,7 @@
             <li class="navigation__item">
               <a class="navigation__link" href="mailto:info@sd.ru">
                 <svg class="navigation__link-icon" width="20" height="20">
-                  <use href="./img/sprite.svg#icon-letter"></use>
+                  <use href="img/sprite.svg#icon-letter"></use>
                 </svg>
                 <span class="navigation__link-text">info@sd.ru</span>
               </a>
@@ -38,7 +38,7 @@
             <li class=" navigation__item">
               <a class="navigation__link" href="tel:+74950005252">
                 <svg class="navigation__link-icon" width="20" height="20">
-                  <use href="./img/sprite.svg#icon-phone"></use>
+                  <use href="img/sprite.svg#icon-phone"></use>
                 </svg>
                 <span class="navigation__link-text">+7 (495) 000 52 52</span>
               </a>
@@ -59,8 +59,103 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container"></div>
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <div class="footer__grid-wrapper">
+          <div class="footer__additional-wrapper">
+            <a class="footer__logo">
+              <img class="footer__logo-label" src="img/svg/logo-company.svg" width="215" height="55"
+                alt="Логотип компании Смарт Девайс.">
+            </a>
+            <section class="footer__social social">
+              <h2 class="visually-hidden">Мы в социальных сетях</h2>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="30" height="30">
+                      <use href="img/sprite.svg#icon-ok"></use>
+                    </svg>
+                    <span class="visually-hidden">Одноклассники</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="30" height="30">
+                      <use href="img/sprite.svg#icon-vk"></use>
+                    </svg>
+                    <span class="visually-hidden">Вконтакте</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <svg width="30" height="30">
+                      <use href="img/sprite.svg#icon-pinterest"></use>
+                    </svg>
+                    <span class="visually-hidden">Пинтерест</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <section class="footer__information information">
+            <h2 class="visually-hidden">Дополнительная информация</h2>
+            <div class="information__wrapper">
+              <b>Разделы сайта</b>
+              <button class="information__button">
+                <span class="visually-hidden">Открыть меню</span>
+              </button>
+              <div class="information__link-wrapper">
+                <ul>
+                  <li>
+                    <a href="#">О Компании</a>
+                  </li>
+                  <li>
+                    <a href="#">Продукты</a>
+                  </li>
+                  <li>
+                    <a href="#">Производство печатных плат</a>
+                  </li>
+                  <li>
+                    <a href="#">Монтаж печатных плат</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="#">Комплектующие</a>
+                  </li>
+                  <li>
+                    <a href="#">Доставка</a>
+                  </li>
+                  <li>
+                    <a href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="information__wrapper">
+              <b>Наш офис</b>
+              <button class="information__button">
+                <span class="visually-hidden">Открыть меню</span>
+              </button>
+              <ul>
+                <li>
+                  <a href="#">г. Мытищи, Олимпийский проспект,<br> д.10</a>
+                </li>
+                <li>
+                  <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+                </li>
+                <li>
+                  <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+                </li>
+                <li>
+                  <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+        </div>
+      </div>
     </footer>
   </div>
 

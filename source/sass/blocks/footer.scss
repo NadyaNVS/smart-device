@@ -1,0 +1,20 @@
+.footer {
+  background-color: $color-black-pearl;
+  color: $color-white-transpanent;
+}
+
+.footer__wrapper {
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+
+.footer__grid-wrapper {
+  display: grid;
+  grid-template-columns: 215px 1fr;
+  column-gap: 160px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 30px;
+}

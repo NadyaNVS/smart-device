@@ -1,0 +1,44 @@
+.information {
+  display: grid;
+  grid-template-columns: 470px 345px;
+  column-gap: 30px;
+}
+
+.information__button {
+  display: none;
+}
+
+.information b {
+  display: block;
+  color: $color-default-white;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.information__link-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+}
+
+.information ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.information li {
+  margin-bottom: 10px;
+
+  &:last-child {
+  margin-bottom: 0;
+  }
+}
+
+.information a {
+  color: $color-white-transpanent;
+  line-height: 22px;
+}
