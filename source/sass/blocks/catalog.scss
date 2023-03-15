@@ -43,10 +43,45 @@
   }
 }
 
-// .catalog__item a {
-//   font-family: $ff-roboto-condensed;
-//   color: $color-default-white;
-// }
+.catalog__item {
+  position: relative;
+  background-color: $color-image-background;
+  background-size: cover;
+  cursor: pointer;
+
+  &--manufacture {
+    background: $gradient-catalog, url("../img/service-image-first.jpg") no-repeat;
+  }
+
+  &--installation {
+    background: $gradient-catalog, url("../img/service-image-second.jpg") no-repeat;
+  }
+
+  &--accessories {
+    background:$gradient-catalog, url("../img/service-image-third.jpg") no-repeat;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $color-deep-sky-blue;
+    bottom: 0;
+    right: 0;
+    border-radius: 3px 0px 0px 0px;
+    background-image: url("../img/svg/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.catalog__item a {
+  width: 100%;
+  display: block;
+  min-height: 650px;
+  padding: 50px 80px 50px 40px;
+}
 
 .catalog__item h3 {
   font-family: $ff-roboto-condensed;
