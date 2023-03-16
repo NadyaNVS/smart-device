@@ -25,6 +25,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 85px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 .catalog h2 {
@@ -37,6 +42,15 @@
   margin-bottom: 50px;
 
   @include vp-767 {
+    display: none;
+  }
+}
+
+.catalog__title-short h2 {
+  display: none;
+
+  @include vp-767 {
+    display: block;
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 40px;
@@ -44,21 +58,112 @@
 }
 
 .catalog__item {
-  position: relative;
   background-color: $color-image-background;
-  background-size: cover;
-  cursor: pointer;
 
   &--manufacture {
-    background: $gradient-catalog, url("../img/service-image-first.jpg") no-repeat;
+    --bgi: url("../img/service-image-first.jpg");
+    background: $gradient-catalog, var(--bgi) center/cover no-repeat;
+
+    @media (min-width: $vp-1024) {
+      @include retina {
+        --bgi: url("../img/service-image-first@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      --bgi: url("../img/service-image-first-tablet.jpg");
+      background: $gradient-catalog, var(--bgi) center/cover no-repeat;
+
+      @include retina {
+        --bgi: url("../img/service-image-first-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      --bgi: url("../img/service-image-first-mobile.jpg");
+      background: $gradient-catalog,  var(--bgi) center/cover no-repeat;
+
+      @include retina {
+        --bgi: url("../img/service-image-first-mobile@2x.jpg");
+      }
+    }
   }
 
   &--installation {
-    background: $gradient-catalog, url("../img/service-image-second.jpg") no-repeat;
+    --bgi: url("../img/service-image-second.jpg");
+    background: $gradient-catalog,  var(--bgi) center/cover no-repeat;
+
+    @media (min-width: $vp-1024) {
+      @include retina {
+        --bgi: url("../img/service-image-second@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      --bgi: url("../img/service-image-second-tablet.jpg");
+      background: $gradient-catalog,  var(--bgi) center/cover no-repeat;
+
+      @include retina {
+        --bgi: url("../img/service-image-second-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      --bgi: url("../img/service-image-second-mobile.jpg");
+      background: $gradient-catalog,  var(--bgi) center/cover no-repeat;
+
+      @include retina {
+        --bgi: url("../img/service-image-second-mobile@2x.jpg");
+      }
+    }
   }
 
   &--accessories {
-    background:$gradient-catalog, url("../img/service-image-third.jpg") no-repeat;
+    --bgi: url("../img/service-image-third.jpg");
+    background: $gradient-catalog,  var(--bgi) center/cover no-repeat;
+
+    @media (min-width: $vp-1024) {
+      @include retina {
+        --bgi: url("../img/service-image-third@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      --bgi: url("../img/service-image-third-tablet.jpg");
+      background: $gradient-catalog,  var(--bgi) center/cover no-repeat;
+
+      @include retina {
+        --bgi: url("../img/service-image-third-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      --bgi: url("../img/service-image-third-mobile.jpg");
+      background: $gradient-catalog,  var(--bgi) center/cover no-repeat;
+
+      @include retina {
+        --bgi: url("../img/service-image-third-mobile@2x.jpg");
+      }
+    }
+  }
+}
+
+.catalog__item a {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  min-height: 650px;
+  border: 1px solid transparent;
+  padding: 50px 80px 50px 40px;
+
+  @include vp-1023 {
+    min-height: 250px;
+    padding: 40px 45px;
+  }
+
+  @include vp-767 {
+    min-height: 250px;
+    padding: 30px 30px;
   }
 
   &::before {
@@ -73,14 +178,26 @@
     background-image: url("../img/svg/arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
-  }
-}
 
-.catalog__item a {
-  width: 100%;
-  display: block;
-  min-height: 650px;
-  padding: 50px 80px 50px 40px;
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover {
+    border: 1px solid $color-deep-sky-blue;
+    opacity: 0.8;
+  }
+
+  &:active {
+    border: 1px solid $color-deep-sky-blue;
+
+    &::before {
+      outline: 1px solid $color-deep-sky-blue;
+      background-color: transparent;
+    }
+  }
 }
 
 .catalog__item h3 {
@@ -90,8 +207,14 @@
   line-height: 30px;
   margin: 0;
   color: $color-default-white;
+  max-width: 160px;
+
+  @include vp-1023 {
+    max-width: 150px;
+  }
 
   @include vp-767 {
     font-size: 18px;
+    max-width: 135px;
   }
 }
