@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordion} from './modules/accordion';
 import {showParagraph} from './modules/add-parargaph';
-
+import {initScroll} from './modules/modals/scroll';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -12,7 +12,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-
   // Modules
   // ---------------------------------
 
@@ -22,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initAccordion();
     showParagraph();
+    initScroll();
     const form = new Form();
     window.form = form;
     form.init();

@@ -34,9 +34,10 @@
     padding: 10px;
   }
 
-  &:hover,
-  &:focus {
+  @include hover-focus {
     opacity: 0.8;
+    color: $color-deep-sky-blue;
+    outline: none;
   }
 }
 
@@ -53,19 +54,14 @@
   border-color: $color-alice-blue;
   padding: 12px 13px 14px 13px;
 
+  &:focus {
+    outline: none;
+    border-color: $color-deep-sky-blue;
+  }
+
   @include vp-1023 {
     display: none;
   }
-
-  // &:hover {
-  //   background-color: $color-deep-sky-blue;
-  //   border-color: $color-deep-sky-blue;
-  // }
-
-  // &:active {
-  //   background-color: $color-black-pearl;
-  //   border-color: $color-black-pearl;
-  // }
 }
 
 .navigation__link-text {

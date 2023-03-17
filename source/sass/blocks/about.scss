@@ -66,6 +66,11 @@
     color: $color-alice-blue;
   }
 
+  &:focus {
+    border-color: $color-black-pearl;
+    outline: none;
+  }
+
   &:active {
     color: $color-deep-sky-blue;
   }

@@ -58,7 +58,6 @@
 }
 
 .catalog__item {
-  background-color: $color-image-background;
 
   &--manufacture {
     --bgi: url("../img/service-image-first.jpg");
@@ -187,6 +186,12 @@
 
   &:hover {
     border: 1px solid $color-deep-sky-blue;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    border: 1px solid $color-deep-sky-blue;
+    outline: none;
     opacity: 0.8;
   }
 

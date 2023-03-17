@@ -13,6 +13,7 @@
   transition: opacity $trans-default;
   font-weight: 700;
   box-sizing: border-box;
+  user-select: none;
 
   &--red {
     background-color: $color-torch-red;
@@ -33,6 +34,7 @@
   }
 
   &:hover {
+    opacity: 0.8;
     background-color: $color-deep-sky-blue;
     border-color: $color-deep-sky-blue;
   }
@@ -41,9 +43,5 @@
     background-color: transparent;
     border-color: $color-deep-sky-blue;
     color: $color-deep-sky-blue;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }
