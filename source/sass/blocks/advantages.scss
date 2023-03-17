@@ -28,7 +28,7 @@
 
 .advantages__item {
   box-sizing: border-box;
-  padding: 40px 45px 66px 41px;
+  padding: 39px 45px 68px 41px;
   border: 1px solid $color-whisper;
   border-left: 5px solid $color-deep-sky-blue;
 
@@ -41,19 +41,25 @@
   }
 
   &--watch {
+    padding-left: 40px;
+
     @include vp-767 {
       padding-bottom: 65px;
     }
   }
 
   &--hired {
+    padding-top: 40px;
+    margin-left: 1px;
+
     @include vp-767 {
       padding-bottom: 46px;
     }
   }
 
   &--detective {
-    padding-bottom: 113px;
+    padding-left: 40px;
+    padding-bottom: 111px;
 
     @include vp-1023 {
       padding-bottom: 121px;
@@ -65,7 +71,8 @@
   }
 
   &--tag {
-    padding-bottom: 94px;
+    margin-left: 2px;
+    padding-bottom: 89px;
 
     @include vp-1023 {
       padding-bottom: 35px;
@@ -77,10 +84,10 @@
   }
 }
 
-.advantages__item svg  {
+.advantages__item svg {
   display: block;
   fill: $color-deep-sky-blue;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   @include vp-1023 {
     margin-bottom: 9px;
@@ -91,6 +98,10 @@
   }
 }
 
+.advantages__item--detective svg {
+  margin-left: -5px;
+}
+
 .advantages__item h3 {
   font-family: $ff-roboto-condensed;
   color: $color-deep-sky-blue;
@@ -98,10 +109,10 @@
   line-height: 34px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
   @include vp-1023 {
-    margin-bottom: 8px;;
+    margin-bottom: 8px;
   }
 
   @include vp-767 {

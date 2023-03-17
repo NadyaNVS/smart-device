@@ -10,7 +10,7 @@
     background-image: url("../img/svg/triangle.svg");
     background-repeat: no-repeat;
     z-index: -1;
-    left: -8px;
+    left: -5px;
     top: -74px;
     width: 978px;
     height: 920px;
@@ -22,7 +22,7 @@
 }
 
 .question__wrapper {
-  padding-top: 170px;
+  padding-top: 166px;
   padding-bottom: 250px;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,9 @@
 }
 
 .question__wrapper img {
-  // margin-top: 60px;
+  width: 510px;
+  height: 285px;
+  margin-top: 21px;
 
   @include vp-1023 {
     display: none;
@@ -50,6 +52,7 @@
 
 .question .question__form {
   min-width: 580px;
+  margin-right: 10px;
 
   @include vp-1023 {
     min-width: 670px;
@@ -67,6 +70,7 @@
   line-height: 51px;
   color: $color-default-white;
   margin: 0;
+  margin-left: -5px;
   margin-bottom: 13px;
 
   @include vp-1023 {
@@ -86,7 +90,7 @@
   font-weight: 400;
   color: $color-default-white;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 
   @include vp-1023 {
     margin-bottom: 25px;
@@ -107,7 +111,7 @@
 }
 
 .question__form-wrapper {
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
 
 .question input,
@@ -140,7 +144,6 @@
     background-color: $color-deep-sky-blue;
     outline: 1px solid $color-black-pearl;
   }
-
 }
 
 .question input {
@@ -150,7 +153,7 @@
 .question textarea {
   min-height: 155px;
   width: 100%;
-  padding: 25px 15px;
+  padding: 22px 15px;
 
   @include vp-767 {
     min-height: 180px;
@@ -178,6 +181,7 @@
     column-gap: 85px;
     margin-right: 55px;
   }
+
   @include vp-767 {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -189,8 +193,8 @@
   background-color: $color-black-pearl;
   font-size: 16px;
   line-height: 19px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 14px;
+  padding-bottom: 10px;
   justify-content: center;
 
 
@@ -214,7 +218,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  align-self: flex-end;
+  margin-top: 13px;
   cursor: pointer;
 }
 

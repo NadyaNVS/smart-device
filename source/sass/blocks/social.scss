@@ -9,7 +9,9 @@
   display: grid;
   grid-template-columns: repeat(3, 40px);
   column-gap: 15px;
-  width: 150px;
+  max-width: 150px;
+  margin-left: 10px;
+
 }
 
 .social__link {

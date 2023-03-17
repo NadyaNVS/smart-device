@@ -647,7 +647,7 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 15px 25px;
+  padding: 15px 26px;
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
@@ -731,9 +731,11 @@ button,
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -webkit-column-gap: 120px;
-  -moz-column-gap: 120px;
-  column-gap: 120px;
+  margin-top: -3px;
+  min-width: 463px;
+  -webkit-column-gap: 119px;
+  -moz-column-gap: 119px;
+  column-gap: 119px;
   -ms-grid-columns: auto auto;
   grid-template-columns: auto auto;
 }
@@ -743,6 +745,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -761,7 +765,9 @@ button,
 .navigation__button {
   color: #f2f5f6;
   border-color: #f2f5f6;
-  padding: 12px 13px 14px 13px;
+  padding: 10px 17px 13px 16px;
+  margin-top: -4px;
+  margin-right: 60px;
 }
 
 .navigation__button:focus {
@@ -769,18 +775,23 @@ button,
   border-color: #00b2ff;
 }
 
+.navigation__link-text {
+  margin-top: -5px;
+}
+
 .promo {
   width: 100%;
   --bgi: url("../img/intro-image.jpg");
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), var(--bgi) no-repeat;
-  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), var(--bgi) no-repeat;
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), var(--bgi) no-repeat;
+  background-color: #041827;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), var(--bgi);
+  background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), var(--bgi);
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), var(--bgi);
   background-position: center;
   background-size: cover;
 }
 
 .promo__wrapper {
-  padding: 305px 0 280px 125px;
+  padding: 305px 0 280px 145px;
 }
 
 .promo h1 {
@@ -792,7 +803,7 @@ button,
   letter-spacing: 0.07em;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 }
 
 .promo p {
@@ -800,7 +811,7 @@ button,
   font-size: 22px;
   line-height: 34px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 47px;
   color: #f2f5f6;
 }
 
@@ -845,23 +856,38 @@ button,
 .advantages__item {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 40px 45px 66px 41px;
+  padding: 39px 45px 68px 41px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
 }
 
+.advantages__item--watch {
+  padding-left: 40px;
+}
+
+.advantages__item--hired {
+  padding-top: 40px;
+  margin-left: 1px;
+}
+
 .advantages__item--detective {
-  padding-bottom: 113px;
+  padding-left: 40px;
+  padding-bottom: 111px;
 }
 
 .advantages__item--tag {
-  padding-bottom: 94px;
+  margin-left: 2px;
+  padding-bottom: 89px;
 }
 
 .advantages__item svg {
   display: block;
   fill: #00b2ff;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+}
+
+.advantages__item--detective svg {
+  margin-left: -5px;
 }
 
 .advantages__item h3 {
@@ -871,7 +897,7 @@ button,
   line-height: 34px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .advantages__item p {
@@ -917,7 +943,7 @@ button,
   line-height: 51px;
   color: #041827;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .about p {
@@ -961,7 +987,7 @@ button,
 }
 
 .catalog__wrapper {
-  padding-top: 70px;
+  padding-top: 66px;
   padding-bottom: 140px;
 }
 
@@ -985,32 +1011,39 @@ button,
   line-height: 51px;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 53px;
 }
 
 .catalog__title-short h2 {
   display: none;
 }
 
+.catalog__item {
+  background-color: #c4c4c4;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .catalog__item--manufacture {
   --bgi: url("../img/service-image-first.jpg");
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-  background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-  background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+  background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+  background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
 }
 
 .catalog__item--installation {
   --bgi: url("../img/service-image-second.jpg");
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-  background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-  background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+  background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+  background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
 }
 
 .catalog__item--accessories {
   --bgi: url("../img/service-image-third.jpg");
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-  background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-  background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+  background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+  background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
 }
 
 .catalog__item a {
@@ -1019,7 +1052,7 @@ button,
   display: inline-block;
   min-height: 650px;
   border: 1px solid transparent;
-  padding: 50px 80px 50px 40px;
+  padding: 46px 80px 50px 40px;
 }
 
 .catalog__item a::before {
@@ -1030,7 +1063,7 @@ button,
   background-color: #00b2ff;
   bottom: 0;
   right: 0;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
   background-image: url("../img/svg/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1089,14 +1122,14 @@ button,
   background-image: url("../img/svg/triangle.svg");
   background-repeat: no-repeat;
   z-index: -1;
-  left: -8px;
+  left: -5px;
   top: -74px;
   width: 978px;
   height: 920px;
 }
 
 .question__wrapper {
-  padding-top: 170px;
+  padding-top: 166px;
   padding-bottom: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1109,8 +1142,15 @@ button,
   align-items: center;
 }
 
+.question__wrapper img {
+  width: 510px;
+  height: 285px;
+  margin-top: 21px;
+}
+
 .question .question__form {
   min-width: 580px;
+  margin-right: 10px;
 }
 
 .question__form h3 {
@@ -1120,6 +1160,7 @@ button,
   line-height: 51px;
   color: #ffffff;
   margin: 0;
+  margin-left: -5px;
   margin-bottom: 13px;
 }
 
@@ -1129,7 +1170,7 @@ button,
   font-weight: 400;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 .question fieldset {
@@ -1140,7 +1181,7 @@ button,
 }
 
 .question__form-wrapper {
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
 
 .question input,
@@ -1207,7 +1248,7 @@ button,
 .question textarea {
   min-height: 155px;
   width: 100%;
-  padding: 25px 15px;
+  padding: 22px 15px;
 }
 
 .question__input-wrapper {
@@ -1235,8 +1276,8 @@ button,
   background-color: #041827;
   font-size: 16px;
   line-height: 19px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 14px;
+  padding-bottom: 10px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1267,8 +1308,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
+  margin-top: 13px;
   cursor: pointer;
 }
 
@@ -1318,12 +1358,13 @@ button,
 }
 
 .footer__wrapper {
-  padding-top: 50px;
+  padding-top: 55px;
   padding-bottom: 55px;
 }
 
 .footer__logo {
   display: block;
+  margin-top: -5px;
   margin-bottom: 30px;
 }
 
@@ -1356,7 +1397,8 @@ button,
   -webkit-column-gap: 15px;
   -moz-column-gap: 15px;
   column-gap: 15px;
-  width: 150px;
+  max-width: 150px;
+  margin-left: 10px;
 }
 
 .social__link {
@@ -1389,6 +1431,7 @@ button,
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
+  margin-top: 2px;
 }
 
 .information__wrapper {
@@ -1407,7 +1450,7 @@ button,
   line-height: 16px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .information__link-wrapper--position {
@@ -1427,7 +1470,7 @@ button,
 }
 
 .information li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .information li:last-child {
@@ -2443,23 +2486,23 @@ button,
 
   .catalog__item--manufacture {
     --bgi: url("../img/service-image-first-tablet.jpg");
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-    background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
   }
 
   .catalog__item--installation {
     --bgi: url("../img/service-image-second-tablet.jpg");
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-    background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
   }
 
   .catalog__item--accessories {
     --bgi: url("../img/service-image-third-tablet.jpg");
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-    background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
   }
 
   .catalog__item a {
@@ -2727,23 +2770,23 @@ button,
 
   .catalog__item--manufacture {
     --bgi: url("../img/service-image-first-mobile.jpg");
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-    background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
   }
 
   .catalog__item--installation {
     --bgi: url("../img/service-image-second-mobile.jpg");
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-    background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
   }
 
   .catalog__item--accessories {
     --bgi: url("../img/service-image-third-mobile.jpg");
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi) center/cover no-repeat;
-    background: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
-    background: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi) center/cover no-repeat;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
   }
 
   .catalog__item a {

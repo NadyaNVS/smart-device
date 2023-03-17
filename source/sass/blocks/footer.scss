@@ -4,7 +4,7 @@
 }
 
 .footer__wrapper {
-  padding-top: 50px;
+  padding-top: 55px;
   padding-bottom: 55px;
 
   @include vp-1023 {
@@ -23,14 +23,15 @@
 
 .footer__grid-wrapper {
   @media (min-width: $vp-1024) {
-  display: grid;
-  grid-template-columns: 215px 1fr;
-  column-gap: 160px;
+    display: grid;
+    grid-template-columns: 215px 1fr;
+    column-gap: 160px;
   }
 }
 
 .footer__logo {
   display: block;
+  margin-top: -5px;
   margin-bottom: 30px;
 
   @include vp-1023 {
