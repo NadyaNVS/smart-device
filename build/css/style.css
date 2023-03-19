@@ -877,6 +877,7 @@ button,
 
 .advantages__item--tag {
   margin-left: 2px;
+  padding-left: 40px;
   padding-bottom: 89px;
 }
 
@@ -888,6 +889,11 @@ button,
 
 .advantages__item--detective svg {
   margin-left: -5px;
+  margin-bottom: 20px;
+}
+
+.advantages__item--tag svg {
+  margin-bottom: 20px;
 }
 
 .advantages__item h3 {
@@ -927,13 +933,18 @@ button,
 .about__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 150px 1fr;
-  grid-template-columns: 150px 1fr;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
   -webkit-column-gap: 100px;
   -moz-column-gap: 100px;
   column-gap: 100px;
-  padding-top: 60px;
+  padding-top: 61px;
   padding-bottom: 100px;
+}
+
+.about img {
+  height: 320px;
+  width: 150px;
 }
 
 .about h2 {
@@ -1359,7 +1370,7 @@ button,
 
 .footer__wrapper {
   padding-top: 55px;
-  padding-bottom: 55px;
+  padding-bottom: 53px;
 }
 
 .footer__logo {
@@ -1470,7 +1481,7 @@ button,
 }
 
 .information li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .information li:last-child {
@@ -1478,6 +1489,7 @@ button,
 }
 
 .information a {
+  display: block;
   color: rgba(255, 255, 255, 0.7);
   line-height: 22px;
 }
@@ -1485,6 +1497,10 @@ button,
 .information a.focus-visible:focus {
   color: #00b2ff;
   outline: none;
+}
+
+.information .information__address {
+  line-height: 22px;
 }
 
 .modal {
@@ -1539,6 +1555,7 @@ button,
   width: 100%;
   min-height: 100%;
   padding: 60px 40px;
+  margin-left: -8px;
 }
 
 .modal__overlay {
@@ -1561,7 +1578,7 @@ button,
 
 .modal__close-btn {
   position: absolute;
-  top: 15px;
+  top: 17px;
   right: 15px;
   z-index: 1;
   width: 40px;
@@ -1612,13 +1629,14 @@ button,
   line-height: 42px;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 4px;
 }
 
 .modal__form p {
   font-size: 16px;
   line-height: 22px;
   margin: 0;
+  max-width: 380px;
   margin-bottom: 40px;
 }
 
@@ -1689,7 +1707,7 @@ button,
 .modal textarea {
   min-height: 155px;
   width: 100%;
-  padding: 25px 15px;
+  padding: 21px 15px;
 }
 
 .modal__form-wrapper {
@@ -1750,6 +1768,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  margin-left: 9px;
 }
 
 .modal__control-mark {
@@ -1766,7 +1785,7 @@ button,
   box-sizing: border-box;
   width: 15px;
   height: 15px;
-  border-radius: 3px;
+  border-radius: 2px;
   border: 1px solid #ffffff;
   margin-right: 10px;
 }
@@ -2388,6 +2407,9 @@ button,
   }
 
   .navigation__list {
+    min-width: 100px;
+    margin-right: 24px;
+    margin-top: -11px;
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
@@ -2421,11 +2443,11 @@ button,
   .promo h1 {
     font-size: 64px;
     line-height: 75px;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
   }
 
   .promo p {
-    margin-bottom: 50px;
+    margin-bottom: 56px;
   }
 
   .promo__button {
@@ -2437,36 +2459,83 @@ button,
     padding-bottom: 40px;
   }
 
+  .advantages__list {
+    gap: 36px;
+  }
+
   .advantages__item {
-    padding: 40px 30px 35px 45px;
+    padding: 40px 30px 35px 40px;
+  }
+
+  .advantages__item--watch {
+    margin-left: -4px;
+    margin-top: -1px;
+    padding-left: 40px;
+    padding-top: 41px;
+  }
+
+  .advantages__item--hired {
+    padding-left: 41px;
+    padding-bottom: 30px;
+    margin-left: -8px;
   }
 
   .advantages__item--detective {
-    padding-bottom: 121px;
+    padding-bottom: 130px;
+    margin-left: -4px;
+    margin-top: -7px;
   }
 
   .advantages__item--tag {
     padding-bottom: 35px;
+    margin-left: -7px;
+    margin-top: -7px;
   }
 
   .advantages__item svg {
-    margin-bottom: 9px;
+    margin-bottom: 15px;
+  }
+
+  .advantages__item--detective svg {
+    margin-left: 0;
+    margin-bottom: 13px;
+  }
+
+  .advantages__item--tag svg {
+    margin-bottom: 10px;
   }
 
   .advantages__item h3 {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+  }
+
+  .advantages__item--detective h3 {
+    margin-bottom: 6px;
+  }
+
+  .advantages__item--tag h3 {
+    margin-bottom: 3px;
   }
 
   .about__wrapper {
-    -webkit-column-gap: 29px;
-    -moz-column-gap: 29px;
-    column-gap: 29px;
-    padding-top: 40px;
-    padding-bottom: 80px;
+    -webkit-column-gap: 27px;
+    -moz-column-gap: 27px;
+    column-gap: 27px;
+    padding-top: 36px;
+    padding-bottom: 79px;
+  }
+
+  .about img {
+    margin-top: 4px;
+    margin-left: -2px;
   }
 
   .about h2 {
-    margin-bottom: 5px;
+    margin-bottom: 11px;
+  }
+
+  .about p {
+    margin-bottom: 18px;
   }
 
   .about__button {
@@ -2474,7 +2543,7 @@ button,
   }
 
   .catalog__wrapper {
-    padding-top: 60px;
+    padding-top: 56px;
     padding-bottom: 75px;
   }
 
@@ -2482,6 +2551,10 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .catalog h2 {
+    margin-bottom: 37px;
   }
 
   .catalog__item--manufacture {
@@ -2507,7 +2580,7 @@ button,
 
   .catalog__item a {
     min-height: 250px;
-    padding: 40px 45px;
+    padding: 36px 45px;
   }
 
   .catalog__item h3 {
@@ -2519,7 +2592,8 @@ button,
   }
 
   .question__wrapper {
-    padding-top: 50px;
+    margin-left: 5px;
+    padding-top: 46px;
     padding-bottom: 125px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2536,11 +2610,24 @@ button,
   }
 
   .question__form h3 {
-    margin-bottom: 10px;
+    margin-left: 0;
+    margin-bottom: 6px;
   }
 
   .question__form p {
     margin-bottom: 25px;
+  }
+
+  .question input {
+    min-width: 320px;
+  }
+
+  .question input {
+    min-width: 270px;
+  }
+
+  .question textarea {
+    padding-top: 29px;
   }
 
   .question__button-wrapper {
@@ -2548,6 +2635,15 @@ button,
     -moz-column-gap: 85px;
     column-gap: 85px;
     margin-right: 55px;
+  }
+
+  .question__button {
+    padding-top: 15px;
+    padding-bottom: 9px;
+  }
+
+  .question__checkbox {
+    margin-top: 9px;
   }
 
   .footer__wrapper {
@@ -2560,8 +2656,8 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 65px;
+    padding-top: 55px;
+    padding-bottom: 62px;
   }
 
   .footer__logo {
@@ -2580,6 +2676,10 @@ button,
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding-bottom: 35px;
+  }
+
+  .social__list {
+    margin: -10px 20px 0 0;
   }
 
   .information {
@@ -2603,11 +2703,16 @@ button,
   }
 
   .information ul:first-child {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 
   .information a {
-    line-height: 25px;
+    line-height: 22px;
+  }
+
+  .information .information__address {
+    margin-bottom: 8px;
+    line-height: 22px;
   }
 }
 
@@ -2639,6 +2744,11 @@ button,
     padding-bottom: 20px;
   }
 
+  .navigation__list {
+    margin-right: 10px;
+    margin-top: -5px;
+  }
+
   .navigation__logo {
     width: 35px;
     height: 35px;
@@ -2656,20 +2766,22 @@ button,
   .promo h1 {
     font-size: 36px;
     line-height: 42px;
+    margin-bottom: 8px;
   }
 
   .promo p {
     font-size: 14px;
     line-height: 22px;
+    margin-bottom: 44px;
   }
 
-  .promo__text br {
+  .promo br {
     display: none;
   }
 
   .promo__button {
     font-size: 14px;
-    padding: 10px 30px;
+    padding: 8px 36px 9px;
     margin-left: 0;
   }
 
@@ -2689,6 +2801,7 @@ button,
   .advantages__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .advantages__item {
@@ -2696,28 +2809,51 @@ button,
   }
 
   .advantages__item--watch {
-    padding-bottom: 65px;
-  }
-
-  .advantages__item--hired {
-    padding-bottom: 46px;
-  }
-
-  .advantages__item--detective {
-    padding-bottom: 132px;
-  }
-
-  .advantages__item--tag {
+    margin-left: 0;
     padding-bottom: 75px;
   }
 
+  .advantages__item--hired {
+    padding-bottom: 56px;
+    margin-left: 0;
+  }
+
+  .advantages__item--detective {
+    margin: 0;
+    padding-bottom: 120px;
+  }
+
+  .advantages__item--tag {
+    margin: 0;
+    padding-bottom: 62px;
+  }
+
   .advantages__item svg {
+    margin-bottom: 17px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .advantages__item--detective svg {
+    margin-bottom: 19px;
+  }
+
+  .advantages__item--tag svg {
     margin-bottom: 20px;
   }
 
   .advantages__item h3 {
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .advantages__item--detective h3 {
+    margin-bottom: 13px;
+  }
+
+  .advantages__item--tag h3 {
+    margin-bottom: 12px;
   }
 
   .advantages__item p {
@@ -2726,8 +2862,8 @@ button,
   }
 
   .about__wrapper {
-    padding-top: 25px;
-    padding-bottom: 80px;
+    padding-top: 22px;
+    padding-bottom: 79px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
@@ -2740,6 +2876,7 @@ button,
   .about h2 {
     font-size: 28px;
     line-height: 39px;
+    margin-bottom: 12px;
   }
 
   .about p {
@@ -2753,7 +2890,7 @@ button,
   }
 
   .catalog__wrapper {
-    padding-top: 50px;
+    padding-top: 46px;
     padding-bottom: 86px;
   }
 
@@ -2765,7 +2902,7 @@ button,
     display: block;
     font-size: 28px;
     line-height: 39px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .catalog__item--manufacture {
@@ -2791,7 +2928,7 @@ button,
 
   .catalog__item a {
     min-height: 250px;
-    padding: 30px 30px;
+    padding: 24px 29px;
   }
 
   .catalog__item a::before {
@@ -2805,45 +2942,61 @@ button,
   }
 
   .question__wrapper {
-    padding-top: 50px;
-    padding-bottom: 90px;
+    margin-left: 0;
+    padding-top: 46px;
+    padding-bottom: 88px;
   }
 
   .question .question__form {
+    margin-right: 0;
     min-width: 270px;
   }
 
   .question__form h3 {
     font-size: 30px;
     line-height: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   .question__form p {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     font-size: 14px;
     line-height: 19px;
   }
 
+  .question__form-wrapper {
+    margin-bottom: 23px;
+  }
+
   .question textarea {
     min-height: 180px;
+    padding-top: 22px;
   }
 
   .question__input-wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
   }
 
   .question__button-wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 24px;
     margin-right: 0;
   }
 
+  .question__button {
+    padding-bottom: 10px;
+  }
+
+  .question__checkbox {
+    margin-top: 0;
+    margin-left: 5px;
+  }
+
   .footer__wrapper {
-    padding-top: 35px;
+    padding-top: 40px;
     padding-bottom: 35px;
   }
 
@@ -2852,11 +3005,17 @@ button,
   }
 
   .footer__additional-wrapper {
-    padding-bottom: 25px;
+    padding-bottom: 23px;
+    margin-left: -6px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .social__list {
+    margin: 0;
+    margin-left: 10px;
   }
 
   .information {
@@ -2876,6 +3035,7 @@ button,
     position: absolute;
     right: 0;
     top: 0;
+    padding: 0;
     width: 100%;
     height: 60px;
     border: none;
@@ -2886,8 +3046,8 @@ button,
   .information__button::after {
     content: "";
     position: absolute;
-    right: 3px;
-    top: 25px;
+    right: 1px;
+    top: 28px;
     width: 15px;
     height: 1px;
     background-color: #c4c4c4;
@@ -2907,16 +3067,29 @@ button,
 
   .information b {
     margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .information ul:first-child {
+    margin-bottom: 11px;
+  }
+
+  .information__link-wrapper ul {
+    margin-top: -6px;
   }
 
   .information__link-wrapper ul:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 
   .information a {
     font-size: 14px;
+  }
+
+  .information .information__address {
+    margin-bottom: 20px;
+    line-height: 19px;
   }
 
   .information__line-wrapper {
@@ -2943,7 +3116,7 @@ button,
     margin-left: calc(50% - 50vw);
   }
 
-  .information [data-content-menu] {
+  .information__link-wrapper {
     max-height: 0;
     overflow: hidden;
     -webkit-transition: max-height 0.3s ease-in-out;

@@ -29,14 +29,16 @@
   align-items: center;
 
   @include vp-1023 {
-    padding-top: 50px;
+    margin-left: 5px;
+    padding-top: 46px;
     padding-bottom: 125px;
     flex-direction: column;
   }
 
   @include vp-767 {
-    padding-top: 50px;
-    padding-bottom: 90px;
+    margin-left: 0;
+    padding-top: 46px;
+    padding-bottom: 88px;
   }
 }
 
@@ -59,6 +61,7 @@
   }
 
   @include vp-767 {
+    margin-right: 0;
     min-width: 270px;
   }
 }
@@ -74,13 +77,14 @@
   margin-bottom: 13px;
 
   @include vp-1023 {
-    margin-bottom: 10px;
+    margin-left: 0;
+    margin-bottom: 6px;
   }
 
   @include vp-767 {
     font-size: 30px;
     line-height: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 }
 
@@ -97,7 +101,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     font-size: 14px;
     line-height: 19px;
   }
@@ -112,6 +116,10 @@
 
 .question__form-wrapper {
   margin-bottom: 28px;
+
+  @include vp-767 {
+    margin-bottom: 23px;
+  }
 }
 
 .question input,
@@ -148,6 +156,14 @@
 
 .question input {
   min-width: 275px;
+
+  @include vp-1023 {
+    min-width: 320px;
+  }
+
+  @include vp-1023 {
+    min-width: 270px;
+  }
 }
 
 .question textarea {
@@ -155,8 +171,13 @@
   width: 100%;
   padding: 22px 15px;
 
+  @include vp-1023 {
+    padding-top: 29px;
+  }
+
   @include vp-767 {
     min-height: 180px;
+    padding-top: 22px;
   }
 }
 
@@ -168,7 +189,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
   }
 }
 
@@ -184,7 +205,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 24px;
     margin-right: 0;
   }
 }
@@ -196,6 +217,15 @@
   padding-top: 14px;
   padding-bottom: 10px;
   justify-content: center;
+
+  @include vp-1023 {
+    padding-top: 15px;
+    padding-bottom: 9px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 10px;
+  }
 
 
   @include hover-focus {
@@ -220,6 +250,15 @@
   align-items: center;
   margin-top: 13px;
   cursor: pointer;
+
+  @include vp-1023 {
+    margin-top: 9px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    margin-left: 5px;
+  }
 }
 
 .question__control-mark {

@@ -58,12 +58,13 @@
   @include vp-1023 {
     font-size: 64px;
     line-height: 75px;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
   }
 
   @include vp-767 {
     font-size: 36px;
     line-height: 42px;
+    margin-bottom: 8px;
   }
 }
 
@@ -76,16 +77,17 @@
   color: $color-alice-blue;
 
   @include vp-1023 {
-    margin-bottom: 50px;
+    margin-bottom: 56px;
   }
 
   @include vp-767 {
     font-size: 14px;
     line-height: 22px;
+    margin-bottom: 44px;
   }
 }
 
-.promo__text br {
+.promo br {
   @include vp-767 {
     display: none;
   }
@@ -114,7 +116,7 @@
 
   @include vp-767 {
     font-size: 14px;
-    padding: 10px 30px;
+    padding: 8px 36px 9px;
     margin-left: 0;
   }
 }
