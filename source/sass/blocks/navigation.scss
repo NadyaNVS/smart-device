@@ -17,8 +17,8 @@
 
   @include vp-1023 {
     min-width: 100px;
-    margin-right: 24px;
-    margin-top: -11px;
+    margin-right: 20px;
+    margin-top: -13px;
     column-gap: 20px;
   }
 
@@ -66,6 +66,7 @@
   padding: 10px 17px 13px 16px;
   margin-top: -4px;
   margin-right: 60px;
+  min-width: 160px;
 
   &:focus {
     outline: none;

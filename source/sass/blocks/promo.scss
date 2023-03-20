@@ -4,6 +4,7 @@
   background-color: $color-black-pearl;
   background-image: $gradient-intro, var(--bgi);
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: $vp-1024) {

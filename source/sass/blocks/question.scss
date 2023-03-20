@@ -43,8 +43,6 @@
 }
 
 .question__wrapper img {
-  width: 510px;
-  height: 285px;
   margin-top: 21px;
 
   @include vp-1023 {
@@ -53,7 +51,8 @@
 }
 
 .question .question__form {
-  min-width: 580px;
+  max-width: 580px;
+  width: 100%;
   margin-right: 10px;
 
   @include vp-1023 {
@@ -111,7 +110,6 @@
   border: none;
   padding: 0;
   margin: 0;
-  width: 100%;
 }
 
 .question__form-wrapper {
@@ -124,6 +122,7 @@
 
 .question input,
 .question textarea {
+  width: 100%;
   color: $color-default-black;
   border: 1px solid transparent;
   font-weight: 400;
@@ -154,21 +153,8 @@
   }
 }
 
-.question input {
-  min-width: 275px;
-
-  @include vp-1023 {
-    min-width: 320px;
-  }
-
-  @include vp-1023 {
-    min-width: 270px;
-  }
-}
-
 .question textarea {
   min-height: 155px;
-  width: 100%;
   padding: 22px 15px;
 
   @include vp-1023 {
@@ -217,6 +203,7 @@
   padding-top: 14px;
   padding-bottom: 10px;
   justify-content: center;
+  align-items: center;
 
   @include vp-1023 {
     padding-top: 15px;
