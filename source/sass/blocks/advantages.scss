@@ -127,6 +127,14 @@
   }
 }
 
+.advantages__item--watch br {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+  }
+}
+
 .advantages__item--detective svg {
   margin-left: -5px;
   margin-bottom: 20px;

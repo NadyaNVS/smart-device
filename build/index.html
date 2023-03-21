@@ -69,7 +69,7 @@
               </svg>
               <h3>Оперативные сроки</h3>
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить
-                и&nbsp;доставлять заказы плат и комплектующих в&nbsp;самые короткие сроки</p>
+                и&nbsp;доставлять заказы плат и&nbsp;<br>комплектующих в&nbsp;самые короткие сроки</p>
             </li>
             <li class="advantages__item advantages__item--hired">
               <svg width="35" height="35">
@@ -132,7 +132,7 @@
         <div class="catalog__wrapper container">
           <h2>Smart Device предлагает следующие товары и&nbsp;услуги</h2>
           <div class="catalog__title-short">
-            <h2>Товары и услуги Smart&nbsp;Device</h2>
+            <h2>Товары и&nbsp;услуги Smart&nbsp;Device</h2>
           </div>
           <ul class="catalog__list">
             <li class="catalog__item catalog__item--manufacture">
@@ -168,11 +168,11 @@
               <fieldset>
                 <div class="question__form-wrapper">
                   <div class="question__input-wrapper">
-                    <div data-validate-type="text" data-limitation="letters" data-required
+                    <div data-validate-type="text" data-limitation="name" data-required
                       data-message-base="Данное поле является обязательным">
                       <label class=" visually-hidden" for="name">Ваше имя:</label>
                       <input type="text" name="name" id="name" placeholder="Имя" minlength="1"
-                        pattern="^[a-zA-ZA-Яа-яЁё]+$" required>
+                        pattern="^[a-zA-Zа-яёА-ЯЁ\-\s]+$/g" required>
                     </div>
                     <div data-validate-type="phone" data-required data-message-base="Данное поле является обязательным">
                       <label class="visually-hidden" for="tel">Телефон:</label>
@@ -248,7 +248,7 @@
               <div class="information__link-wrapper information__link-wrapper--position" data-content-menu>
                 <ul>
                   <li>
-                    <a href="#">О Компании</a>
+                    <a href="#">О&nbsp;Компании</a>
                   </li>
                   <li>
                     <a href="#">Продукты</a>
@@ -281,7 +281,8 @@
               <div class="information__link-wrapper" data-content-menu>
                 <ul>
                   <li>
-                    <a class="information__address" href="#">г.&nbsp;Мытищи, Олимпийский&nbsp;проспект,<br>д.10</a>
+                    <a class="information__address" href="#">г.&nbsp;Мытищи,
+                      Олимпийский&nbsp;проспект,<br>д.10</a>
                   </li>
                   <li>
                     <a href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -319,11 +320,11 @@
             <fieldset>
               <div class="modal__form-wrapper">
 
-                <div data-validate-type="text" data-limitation="letters" data-required
+                <div data-validate-type="text" data-limitation="name" data-required
                   data-message-base="Данное поле является обязательным">
                   <label class="visually-hidden" for="modal-name">Ваше имя:</label>
                   <input type="text" name="name" id="modal-name" placeholder="Имя" minlength="1"
-                    pattern="^[a-zA-ZA-Яа-яЁё]+$" data-focus required>
+                    pattern="^[a-zA-Zа-яёА-ЯЁ\-\s]+$/g" data-focus required>
                 </div>
 
                 <div data-validate-type="phone" data-required data-message-base="Данное поле является обязательным">

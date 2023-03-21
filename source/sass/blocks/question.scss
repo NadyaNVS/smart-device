@@ -170,7 +170,7 @@
 .question__input-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
+  gap: 20px 30px ;
   margin-bottom: 20px;
 
   @include vp-767 {
@@ -202,8 +202,6 @@
   line-height: 19px;
   padding-top: 14px;
   padding-bottom: 10px;
-  justify-content: center;
-  align-items: center;
 
   @include vp-1023 {
     padding-top: 15px;
@@ -227,6 +225,7 @@
 }
 
 .question__checkbox-wrapper {
+  display: flex;
   order: 1;
 }
 

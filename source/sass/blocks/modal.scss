@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $color-background-modal;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -58,11 +58,11 @@
   }
 
   &__content {
-    position: relative;
-
+    position: fixed;
+    top: 146px;
     width: 500px;
-    padding: 40px;
-
+    // padding: 40px;
+padding: 37px 40px 44px;
     background-color: $color-deep-sky-blue;
     color: $color-default-white;
     border-radius: 3px;
@@ -140,7 +140,7 @@
   line-height: 22px;
   margin: 0;
   max-width: 380px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .modal fieldset {
@@ -157,7 +157,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  padding: 13px 15px;
+  padding: 13px 14px;
   border-radius: 3px;
   box-sizing: border-box;
   background-color: $color-background-input;
@@ -185,7 +185,7 @@
 .modal textarea {
   min-height: 155px;
   width: 100%;
-  padding: 21px 15px;
+  padding: 23px 14px;
 }
 
 .modal__form-wrapper {
@@ -205,8 +205,8 @@
   background-color: $color-black-pearl;
   font-size: 16px;
   line-height: 19px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   justify-content: center;
   margin-bottom: 20px;
 
