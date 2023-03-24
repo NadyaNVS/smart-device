@@ -71,16 +71,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  &::before {
-    position: absolute;
-    content: "";
-    background-color: $color-image-background;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
   @include vp-1023 {
     background-position: top center;
   }
