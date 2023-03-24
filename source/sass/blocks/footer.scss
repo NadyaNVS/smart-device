@@ -4,6 +4,9 @@
 }
 
 .footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 160px;
   padding-top: 55px;
   padding-bottom: 53px;
 
@@ -21,15 +24,8 @@
   }
 }
 
-.footer__grid-wrapper {
-  @media (min-width: $vp-1024) {
-    display: grid;
-    grid-template-columns: 215px 1fr;
-    column-gap: 160px;
-  }
-}
-
 .footer__logo {
+  width: 215px;
   display: block;
   margin-top: -5px;
   margin-bottom: 30px;
@@ -42,6 +38,7 @@
     margin-bottom: 15px;
   }
 }
+
 
 .footer__additional-wrapper {
   display: flex;

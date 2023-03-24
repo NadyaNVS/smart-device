@@ -78,7 +78,7 @@
     color: $color-alice-blue;
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: $color-black-pearl;
     outline: none;
   }

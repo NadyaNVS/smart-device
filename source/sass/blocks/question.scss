@@ -277,6 +277,7 @@
 
 
 .question__checkbox input[type="checkbox"]:hover + .question__control-mark,
-.question__checkbox input[type="checkbox"]:focus + .question__control-mark {
+.question__checkbox input[type="checkbox"]:focus-visible + .question__control-mark {
   border-color: $color-black-pearl;
+  opacity: 0.8;
 }

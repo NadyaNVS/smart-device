@@ -24,10 +24,11 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px 85px;
+  gap: 20px 7%;
 
   @include vp-1023 {
     grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
     gap: 30px;
   }
 }
@@ -62,10 +63,27 @@
 }
 
 .catalog__item {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
   background-color: $color-silver;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $color-image-background;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include vp-1023 {
+    background-position: top center;
+  }
 
   &--manufacture {
     --bgi: url("../img/service-image-first.jpg");
@@ -86,7 +104,7 @@
       }
     }
 
-    @include vp-767 {
+    @media (max-width: $vp-375) {
       --bgi: url("../img/service-image-first-mobile.jpg");
       background-image: $gradient-catalog, var(--bgi);
 
@@ -115,7 +133,7 @@
       }
     }
 
-    @include vp-767 {
+    @media (max-width: $vp-375) {
       --bgi: url("../img/service-image-second-mobile.jpg");
       background-image: $gradient-catalog, var(--bgi);
 
@@ -144,7 +162,7 @@
       }
     }
 
-    @include vp-767 {
+    @media (max-width: $vp-375) {
       --bgi: url("../img/service-image-third-mobile.jpg");
       background-image: $gradient-catalog, var(--bgi);
 

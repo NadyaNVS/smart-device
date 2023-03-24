@@ -639,9 +639,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1260px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .btn {
@@ -740,11 +740,13 @@ button,
   display: grid;
   margin-top: -3px;
   min-width: 463px;
-  -webkit-column-gap: 119px;
-  -moz-column-gap: 119px;
-  column-gap: 119px;
+  gap: 20px 119px;
   -ms-grid-columns: auto auto;
   grid-template-columns: auto auto;
+}
+
+.navigation__logo {
+  width: 215px;
 }
 
 .navigation__link {
@@ -775,12 +777,12 @@ button,
   padding: 10px 17px 13px 16px;
   margin-top: -4px;
   margin-right: 60px;
-  min-width: 160px;
+  max-width: 270px;
 }
 
-.navigation__button:focus {
-  outline: none;
+.navigation__button:focus-visible {
   border-color: #00b2ff;
+  outline: none;
 }
 
 .navigation__link-text {
@@ -800,7 +802,7 @@ button,
 }
 
 .promo__wrapper {
-  padding: 305px 0 280px 145px;
+  padding: 305px 0 280px 165px;
 }
 
 .promo h1 {
@@ -983,7 +985,7 @@ button,
   color: #f2f5f6;
 }
 
-.about__button:focus {
+.about__button:focus-visible {
   border-color: #041827;
   outline: none;
 }
@@ -1018,7 +1020,7 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px 85px;
+  gap: 20px 7%;
 }
 
 .catalog h2 {
@@ -1036,10 +1038,27 @@ button,
 }
 
 .catalog__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   background-color: #c4c4c4;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.catalog__item::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(4, 24, 39, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .catalog__item--manufacture {
@@ -1347,13 +1366,15 @@ button,
 }
 
 .question__checkbox input[type=checkbox]:hover + .question__control-mark,
-.question__checkbox input[type=checkbox]:focus + .question__control-mark {
+.question__checkbox input[type=checkbox]:focus-visible + .question__control-mark {
   border-color: #041827;
+  opacity: 0.8;
 }
 
 .input-message.is-invalid {
   margin: 0;
   padding: 0;
+  margin-top: 3px;
   display: block;
   font-size: 11px;
   line-height: 11px;
@@ -1367,11 +1388,19 @@ button,
 }
 
 .footer__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
+  -webkit-column-gap: 160px;
+  -moz-column-gap: 160px;
+  column-gap: 160px;
   padding-top: 55px;
   padding-bottom: 53px;
 }
 
 .footer__logo {
+  width: 215px;
   display: block;
   margin-top: -5px;
   margin-bottom: 30px;
@@ -1497,6 +1526,12 @@ button,
 
 .information .information__address {
   line-height: 22px;
+  cursor: text;
+}
+
+.information .information__address.focus-visible:focus {
+  color: rgba(255, 255, 255, 0.7);
+  outline: none;
 }
 
 .modal {
@@ -1551,7 +1586,6 @@ button,
   width: 100%;
   min-height: 100%;
   padding: 60px 40px;
-  margin-left: -8px;
 }
 
 .modal__overlay {
@@ -1564,8 +1598,8 @@ button,
 }
 
 .modal__content {
-  position: fixed;
-  top: 146px;
+  position: relative;
+  margin-right: 14px;
   width: 500px;
   padding: 37px 40px 44px;
   background-color: #00b2ff;
@@ -1803,8 +1837,9 @@ button,
 }
 
 .modal__checkbox input[type=checkbox]:hover + .modal__control-mark,
-.modal__checkbox input[type=checkbox]:focus + .modal__control-mark {
+.modal__checkbox input[type=checkbox]:focus-visible + .modal__control-mark {
   border-color: #041827;
+  opacity: 0.8;
 }
 
 /* @mixin hover-focus {
@@ -1866,35 +1901,28 @@ button,
   }
 }
 
-@media (min-width: 1024px) {
-  .footer__grid-wrapper {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 215px 1fr;
-    grid-template-columns: 215px 1fr;
-    -webkit-column-gap: 160px;
-    -moz-column-gap: 160px;
-    column-gap: 160px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
     padding: 0 50px;
   }
 
   .header {
+    position: static;
     padding-top: 20px;
     padding-bottom: 25px;
   }
 
   .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     min-width: 100px;
+    max-width: 430px;
     margin-right: 20px;
     margin-top: -13px;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
+    gap: 20px;
   }
 
   .navigation__link {
@@ -1919,6 +1947,7 @@ button,
   }
 
   .promo__wrapper {
+    margin-top: -100px;
     padding: 180px 50px 205px 50px;
   }
 
@@ -2036,11 +2065,16 @@ button,
   .catalog__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
     gap: 30px;
   }
 
   .catalog h2 {
     margin-bottom: 37px;
+  }
+
+  .catalog__item {
+    background-position: top center;
   }
 
   .catalog__item--manufacture {
@@ -2157,15 +2191,13 @@ button,
   }
 
   .social__list {
-    margin: -10px 20px 0 0;
+    margin: -8px -4px 0 0;
   }
 
   .information {
-    -ms-grid-columns: 220px 345px;
-    grid-template-columns: 220px 345px;
-    -webkit-column-gap: 130px;
-    -moz-column-gap: 130px;
-    column-gap: 130px;
+    -webkit-column-gap: 125px;
+    -moz-column-gap: 125px;
+    column-gap: 125px;
   }
 
   .information__link-wrapper--position {
@@ -2178,10 +2210,6 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-
-  .information ul:first-child {
-    margin-bottom: 7px;
   }
 
   .information a {
@@ -2238,7 +2266,8 @@ button,
   }
 
   .promo__wrapper {
-    padding: 150px 25px 190px 25px;
+    margin-top: -69px;
+    padding: 150px 25px 189px 25px;
   }
 
   .promo h1 {
@@ -2381,27 +2410,6 @@ button,
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 30px;
-  }
-
-  .catalog__item--manufacture {
-    --bgi: url("../img/service-image-first-mobile.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
-    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
-    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
-  }
-
-  .catalog__item--installation {
-    --bgi: url("../img/service-image-second-mobile.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
-    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
-    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
-  }
-
-  .catalog__item--accessories {
-    --bgi: url("../img/service-image-third-mobile.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
-    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
-    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
   }
 
   .catalog__item a {
@@ -2624,7 +2632,32 @@ button,
   .promo {
     --bgi: url("../img/intro-image-mobile@2x.jpg");
   }
+}
 
+@media (max-width: 375px) {
+  .catalog__item--manufacture {
+    --bgi: url("../img/service-image-first-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+  }
+
+  .catalog__item--installation {
+    --bgi: url("../img/service-image-second-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+  }
+
+  .catalog__item--accessories {
+    --bgi: url("../img/service-image-third-mobile.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 24, 39, 0.5)), to(rgba(4, 24, 39, 0.5))), var(--bgi);
+    background-image: -o-linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+    background-image: linear-gradient(rgba(4, 24, 39, 0.5), rgba(4, 24, 39, 0.5)), var(--bgi);
+  }
+}
+
+@media (max-width: 375px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 375px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 375px) and (min-resolution: 144dpi), (max-width: 375px) and (min-resolution: 1.5dppx) {
   .catalog__item--manufacture {
     --bgi: url("../img/service-image-first-mobile@2x.jpg");
   }
@@ -2658,6 +2691,11 @@ button,
 
   .information a:hover:not(.focus-visible) {
     color: #00b2ff;
+    outline: none;
+  }
+
+  .information .information__address:hover:not(.focus-visible) {
+    color: rgba(255, 255, 255, 0.7);
     outline: none;
   }
 
