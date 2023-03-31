@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-1023 {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
 
 .navigation__list {
@@ -11,15 +16,12 @@
   list-style-type: none;
   display: grid;
   margin-top: -3px;
-  min-width: 463px;
   gap: 20px 119px;
   grid-template-columns: auto auto;
 
   @include vp-1023 {
     display: flex;
     flex-wrap: wrap;
-    min-width: 100px;
-    max-width: 430px;
     margin-right: 20px;
     margin-top: -13px;
     gap: 20px;
